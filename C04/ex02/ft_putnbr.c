@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcustard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kcustard <kcustard@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 16:15:01 by kcustard          #+#    #+#             */
-/*   Updated: 2020/07/21 14:36:58 by kcustard         ###   ########.fr       */
+/*   Updated: 2020/09/27 12:55:19 by kcustard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,11 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb / 10);
 	i = nb % 10 + '0';
 	write(1, &i, 1);
+}
+
+int main()
+{
+	int a = 2147483647;
+	ft_putnbr(a);
+	return (0);
 }

@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcustard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kcustard <kcustard@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 18:08:34 by kcustard          #+#    #+#             */
-/*   Updated: 2020/07/19 18:53:49 by kcustard         ###   ########.fr       */
+/*   Updated: 2020/09/26 21:20:28 by kcustard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -18,4 +20,12 @@ int	ft_strcmp(char *s1, char *s2)
 	while (s1[i] == s2[i] && s1[i] != '\0')
 		i++;
 	return (s1[i] - s2[i]);
+}
+
+int main()
+{
+	char a[] = "lol";
+	char b[] = "lox";
+	printf("%i\n", ft_strcmp(a, b));
+	return (0);
 }

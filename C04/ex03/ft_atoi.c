@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcustard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kcustard <kcustard@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 18:09:56 by kcustard          #+#    #+#             */
-/*   Updated: 2020/07/21 16:28:37 by kcustard         ###   ########.fr       */
+/*   Updated: 2020/10/18 00:02:12 by kcustard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_atoi(char *str)
 {
 	int				i;
-	unsigned int	nb;
+	long int		nb;
 	int				min;
 
 	i = 0;
@@ -29,11 +29,13 @@ int		ft_atoi(char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 		nb = nb * 10 + (str[i++] - '0');
 	nb = nb * min;
+	if (nb <= -2147483648 || nb >= 2147483647)
+		return (0);
 	return (nb);
 }
 
 int main()
 {
-	char a[] = " ---+--+1234ab567";
+	char a[] = " ---+----2147483648b567";
 	printf("%i\n", ft_atoi(a));
 }

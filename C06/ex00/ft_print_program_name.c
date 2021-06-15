@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcustard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kbatwoma <kbatwoma@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 10:21:31 by kcustard          #+#    #+#             */
-/*   Updated: 2020/07/23 18:48:01 by kcustard         ###   ########.fr       */
+/*   Updated: 2021/01/30 11:29:38 by kbatwoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	int		i;
 	char	name;
 
-	argc = 1;
+	(void)argc;
 	i = 0;
 	while (argv[0][i])
 	{

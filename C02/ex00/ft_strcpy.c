@@ -3,23 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcustard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kcustard <kcustard@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 11:48:37 by kcustard          #+#    #+#             */
-/*   Updated: 2020/07/18 16:17:41 by kcustard         ###   ########.fr       */
+/*   Updated: 2020/08/02 11:24:25 by kcustard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 char	*ft_strcpy(char *dest, char *src)
 {
-	int a;
+	int i;
 
-	a = 0;
-	while (src[0] != '\0')
+	i = 0;
+	while (src[i] != '\0')
 	{
-		dest[a] = src[a];
-		a++;
+		dest[i] = src[i];
+		i++;
 	}
-	dest[a] = '\0';
+	dest[i] = '\0';
 	return (dest);
+}
+
+int main()
+{
+	char a[] = "Hellon";
+	char b[] = "Hellof";
+	printf("%s\n", ft_strcpy(a, b));
+	return (0);
 }

@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcustard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kcustard <kcustard@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 19:07:06 by kcustard          #+#    #+#             */
-/*   Updated: 2020/07/22 19:14:07 by kcustard         ###   ########.fr       */
+/*   Updated: 2020/10/19 10:46:09 by kcustard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_fibonacci(int index)
 {
@@ -23,4 +25,11 @@ int	ft_fibonacci(int index)
 		return (1);
 	else
 		return (ft_fibonacci(i - 1) + ft_fibonacci(i - 2));
+}
+
+int main()
+{
+	int a = 8;
+	printf("%i\n", ft_fibonacci(a));
+	return(0);
 }

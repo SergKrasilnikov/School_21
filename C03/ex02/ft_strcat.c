@@ -3,27 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcustard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kcustard <kcustard@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 18:54:45 by kcustard          #+#    #+#             */
-/*   Updated: 2020/07/19 19:12:35 by kcustard         ###   ########.fr       */
+/*   Updated: 2020/09/27 10:52:48 by kcustard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 char	*ft_strcat(char *dest, char *src)
 {
 	int i;
-	int ii;
+	int e;
 
 	i = 0;
-	ii = 0;
+	e = 0;
 	while (dest[i] != '\0')
 		i++;
-	while (src[ii] != '\0')
+	while (src[e] != '\0')
 	{
-		dest[i + ii] = src[ii];
-		ii++;
+		dest[i + e] = src[e];
+		e++;
 	}
-	dest[i + ii] = '\0';
+	dest[i + e] = '\0';
 	return (dest);
+}
+
+int main()
+{
+	char a[] = "lol";
+	char b[] = "a";
+	printf("%s\n", ft_strcat(a, b));
+	return (0);
 }

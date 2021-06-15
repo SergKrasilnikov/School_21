@@ -3,28 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcustard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kcustard <kcustard@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 19:14:02 by kcustard          #+#    #+#             */
-/*   Updated: 2020/07/19 20:16:41 by kcustard         ###   ########.fr       */
+/*   Updated: 2020/09/26 22:34:35 by kcustard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int i;
-	unsigned int ii;
+	unsigned int e;
 
 	i = 0;
-	ii = 0;
+	e = 0;
 	while (dest[i] != '\0')
 		i++;
-	while (src[ii] != '\0' && ii < nb)
+	while (src[e] != '\0' && e < nb)
 	{
-		dest[i] = src[ii];
-		i++;
-		ii++;
+		dest[i + e] = src[e];
+		e++;
 	}
-	dest[i] = '\0';
+	dest[i + e] = '\0';
 	return (dest);
+}
+
+int main()
+{
+	char a[] = "deli";
+	char b[] = "mobil";
+	unsigned int c = 5;
+	printf("%s\n", ft_strncat(a, b, c));
+	return (0);
 }

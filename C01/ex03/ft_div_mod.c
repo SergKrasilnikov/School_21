@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	int c;
@@ -17,4 +19,18 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 	c = a / b;
 	*div = c;
 	*mod = a % b;
+}
+
+int main()
+{
+	int d;
+	int e;
+	int div1;
+	int mod1;
+
+	d = 21;
+	e = 10;
+	ft_div_mod(d, e, &div1, &mod1);
+	printf("%i\n%i\n", div1, mod1);
+	return (0);
 }

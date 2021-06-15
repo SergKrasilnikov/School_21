@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcustard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kbatwoma <kbatwoma@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 16:44:39 by kcustard          #+#    #+#             */
-/*   Updated: 2020/07/23 18:47:45 by kcustard         ###   ########.fr       */
+/*   Updated: 2021/01/30 11:26:58 by kbatwoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,19 @@
 int	main(int argc, char **argv)
 {
 	int		i;
-	int		ii;
+	int		index;
 	char	argm;
 
-	i = 0;
-	ii = 1;
-	while (ii < argc)
+	index = 0;
+	while (++index < argc)
 	{
-		while (argv[ii][i])
+		i = -1;
+		while (argv[index][++i])
 		{
-			argm = argv[ii][i];
+			argm = argv[index][i];
 			write(1, &argm, 1);
-			i++;
 		}
 		write(1, "\n", 1);
-		i = 0;
-		ii++;
 	}
 	return (0);
 }
