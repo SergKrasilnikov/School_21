@@ -38,4 +38,3 @@ int main()
 	ft_putnbr(a);
 	return (0);
 }
-#hello_Serg
