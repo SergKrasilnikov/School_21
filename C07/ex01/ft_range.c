@@ -1,49 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: venus <venus@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/06 21:16:52 by venus             #+#    #+#             */
-/*   Updated: 2021/08/09 19:23:36 by venus            ###   ########.fr       */
+/*   Created: 2021/08/09 17:50:21 by venus             #+#    #+#             */
+/*   Updated: 2021/08/09 23:05:20 by venus            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int ft_strlen(char *str)
+int *ft_range(int min, int max)
 {
-    int out;
-    out = 0;
+    int *dest;
+    int index;
+    int len;
+    len = max-min;
+    index = 0;
 
-    while(str[out] != '\0')
-        out++;
-    return(out);
-}
-
-char    *ft_strdup(char *src)
-{
-    int param;
-    char *dest;
-    param = 0;
-    dest = (char*)malloc(sizeof(char)*(ft_strlen(src)+1));
-
-    while(src[param] != '\0')
-    {
-        dest[param] = src[param];
-        param++;
-    }
-    dest[param] = '\0';
+    if(min >= max)
+        return(NULL);
+    dest = (int*)malloc(sizeof(int)*(len));
+    while(index < len)
+        dest[index++] = min++;
     return(dest);
 }
 
 int main()
 {
-    char res[] = "World";
-    char *new = ft_strdup(res);
-    printf("%s\n", new);
-    free(new);
+    int from, to;
+    int *a;
+    int indexm;
+    indexm = 0;
+    from = 5;
+    to = 10;
+    a = ft_range(from, to);
+    while(from++ < to)
+        printf("%d\n", a[indexm++]);
+    free(a);
     return(0);
 }
