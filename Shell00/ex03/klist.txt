@@ -1,0 +1,5 @@
+Credentials cache: FILE:/tmp/krb5cc_1000
+            Principal: steve/admin@EXAMPLE.COM
+
+      Issued           Expires          Principal
+Jul 13 17:53:34  Jul 14 03:53:34  krbtgt/EXAMPLE.COM@EXAMPLE.COM
